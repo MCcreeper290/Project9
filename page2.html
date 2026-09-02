@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Access Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            text-align: center;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+        .secret-link {
+            position: fixed;
+            bottom: 5px;
+            right: 5px;
+            width: 10px;
+            height: 10px;
+            background: #f0f2f5;
+            cursor: default;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Enter Password to Proceed to R&D</h2>
+   
+    <input type="text" id="passcode" placeholder="Enter code here...">
+    <button onclick="checkCode()">Submit</button>
+
+    <div id="errorMessage" class="error"></div>
+
+    <a href="index.html" title="Return">Go back</a>
+
+    <script>
+        function checkCode() {
+           
+            const userInput = document.getElementById("passcode").value;
+            const errorDiv = document.getElementById("errorMessage");
+
+            
+            const correctCode = "Project583703546Core";
+
+       
+            if (userInput === correctCode) {
+            
+                errorDiv.innerText = "";
+                window.location.href = "RND-Redacted.html"; 
+            } else {
+             
+                errorDiv.innerText = "Incorrect code. Please try again.";
+            }
+        }
+    </script>
+
+
+
+</body>
+</html>
