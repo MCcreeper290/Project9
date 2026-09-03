@@ -10,7 +10,7 @@ function checkCode() {
             if (userInput === correctCode) {
             
                 errorDiv.innerText = "";
-                window.location.href = "RND-Redacted.html"; 
+                window.location.href = "RND-Redacted.svg"; 
             } else {
              
                 errorDiv.innerText = "Incorrect code. Please try again.";
