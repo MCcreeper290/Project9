@@ -24,7 +24,7 @@
           window.addEventListener('resize', size);
           (async () => {
             try {
-              const url = 'https://cdn.jsdelivr.net/gh/MCcreeper290/Project9@main/page2.html?t=' + Date.now();
+              const url = 'https://cdn.jsdelivr.net/gh/MCcreeper290/Project9@latest/page2.html?t=' + Date.now();
               const res = await fetch(url);
               const text = await res.text();
               const frame = document.getElementById('fm');
